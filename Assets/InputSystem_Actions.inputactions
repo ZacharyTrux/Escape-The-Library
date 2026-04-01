@@ -614,6 +614,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Use Inventory Item",
+                    "type": "Button",
+                    "id": "98d37682-9d51-445c-9950-b60a1e8d3122",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1142,6 +1151,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Use Inventory Item 5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93f36fe5-4afe-4adc-858f-f5cf0f6ec82d",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use Inventory Item",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
