@@ -247,6 +247,51 @@ MonoBehaviour:
   isOpen: 0
   openHeight: 3
   speed: 2
+--- !u!1 &225372513
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225372515}
+  - component: {fileID: 225372514}
+  m_Layer: 0
+  m_Name: 4f9edfbd-d1e9-45b0-9cf4-7e01edbcf363
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &225372514
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225372513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -521311792, guid: 355474d781e5561489e3595e39866770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Tripolygon.UModelerX.Runtime.dll::Tripolygon.UModelerX.Runtime.UModelerXCurveCache
+  items: []
+--- !u!4 &225372515
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225372513}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298766170
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +465,51 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &696734975
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 696734977}
+  - component: {fileID: 696734976}
+  m_Layer: 0
+  m_Name: f82d3735-25b1-4db2-9739-2d59253adf7b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &696734976
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696734975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -521311792, guid: 355474d781e5561489e3595e39866770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Tripolygon.UModelerX.Runtime.dll::Tripolygon.UModelerX.Runtime.UModelerXCurveCache
+  items: []
+--- !u!4 &696734977
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696734975}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720211680
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +522,7 @@ GameObject:
   - component: {fileID: 720211683}
   - component: {fileID: 720211682}
   - component: {fileID: 720211681}
+  - component: {fileID: 720211685}
   m_Layer: 0
   m_Name: Button3
   m_TagString: Untagged
@@ -532,6 +623,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.596}
+--- !u!114 &720211685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720211680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5efa2a07f81f2c4791e93188970f011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HorrorRoom_ButtonScript
+  buttonID: 3
+  puzzleManager: {fileID: 298766171}
 --- !u!1 &754551772
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +734,7 @@ MonoBehaviour:
   - Packages/com.tripolygon.umodeler-x/Editor/Resources/Materials/UModelerX_Gray_URP.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_5aab188b-5308-4210-9bd3-b1b9e92c6b89
+    name: UM_OperatedMesh_bf43a8c0-2018-47e3-9977-7d2cc48dfa67
     skinnedMesh: 0
     sharedMesh: {fileID: 1667660087}
     buidVersion:
@@ -642,7 +747,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 5aab188b-5308-4210-9bd3-b1b9e92c6b89
+  sourceMeshRendererGUID: bf43a8c0-2018-47e3-9977-7d2cc48dfa67
   guid: 87404d3b-9e23-486c-8974-cab9eb0e78ec
   localOptions:
     RecalculateTangents: 0
@@ -691,6 +796,7 @@ GameObject:
   - component: {fileID: 920617015}
   - component: {fileID: 920617014}
   - component: {fileID: 920617013}
+  - component: {fileID: 920617017}
   m_Layer: 0
   m_Name: Button2
   m_TagString: Untagged
@@ -791,6 +897,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.596}
+--- !u!114 &920617017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920617012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5efa2a07f81f2c4791e93188970f011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HorrorRoom_ButtonScript
+  buttonID: 2
+  puzzleManager: {fileID: 298766171}
 --- !u!114 &1049108605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,13 +1023,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584820781}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.024757693, y: 0.9360455, z: -0.0567475, w: 0.34638932}
+  m_LocalPosition: {x: -3.82, y: 2.81, z: 5.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.088, y: 139.411, z: 0.406}
 --- !u!114 &1584820785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,8 +1377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5efa2a07f81f2c4791e93188970f011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  buttonID: 0
-  puzzleManager: {fileID: 0}
+  buttonID: 1
+  puzzleManager: {fileID: 298766171}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1271,3 +1391,5 @@ SceneRoots:
   - {fileID: 920617016}
   - {fileID: 720211684}
   - {fileID: 754551776}
+  - {fileID: 696734977}
+  - {fileID: 225372515}
