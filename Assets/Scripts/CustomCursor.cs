@@ -22,14 +22,17 @@ public class CustomCursor : MonoBehaviour {
   private void Update() {
     img.sprite = sprDefault;
     img.color = clrDefault;
+
     var ray = Camera.main.ScreenPointToRay(transform.position);
     if (Physics.Raycast(ray, out RaycastHit hit, 100)) {
+
       if (hit.collider.CompareTag("Clickable")) {
         img.sprite = sprHover;
         img.color = clrHover;
       }
-      if (input.UI.Click.WasPressedThisFrame()) {
-        hit.collider.gameObject.SendMessage("Grab", SendMessageOptions.DontRequireReceiver);
+
+      if(input.UI.Click.WasPressedThisFrame()){
+        hit.collider.gameObject.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
       }
     }
   }
