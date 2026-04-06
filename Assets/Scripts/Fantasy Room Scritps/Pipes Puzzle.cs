@@ -2,8 +2,11 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 
-public class PipesPuzzle : MonoBehaviour
-{
+public class PipesPuzzle : MonoBehaviour{
+    public GameObject hotSword;
+    public GameObject swordPuzzle;
+    public GameObject fire;
+
     private Pipe startPipe;
     private Pipe endPipe;
     private List<Pipe> pipes;
@@ -48,6 +51,8 @@ public class PipesPuzzle : MonoBehaviour
     }
 
     private void HandleWin(){
-        Debug.Log("Puzzle completed!");
+        fire.SetActive(false);
+        hotSword.SetActive(false);
+        swordPuzzle.SetActive(true);
     }
 }
