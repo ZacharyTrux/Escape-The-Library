@@ -1,16 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PortalScript : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+public class PortalScript : MonoBehaviour{
+    public Object scene;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Interact(){
+        SceneManager.LoadScene(scene.name);
     }
 }
