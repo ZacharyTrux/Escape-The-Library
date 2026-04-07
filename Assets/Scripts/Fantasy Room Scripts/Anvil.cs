@@ -7,15 +7,18 @@ public class Anvil : MonoBehaviour{
     private GameObject repairEffect;
     private float hintDuration = 2.0f;
     private Coroutine hintCoroutine;
+    private Inventory inventory;
 
     public GameObject hintMessage;
+    public GameObject completedSword; 
+
+    private void Awake(){
+        inventory = Inventory.Instance;
+    }
 
     public void Interact(){
-        Debug.Log("Interacting with anvil");
-        Inventory inventory = Inventory.Instance;
-
-        if(inventory.slots.Count >= fragmentsNeeded && false){
-            RepairSword(inventory);
+        if(inventory.ItemCount() >= fragmentsNeeded){
+            RepairSword();
         }
         else{
             GiveHint($"You need {fragmentsNeeded} pieces to forge the sword.");
@@ -41,7 +44,9 @@ public class Anvil : MonoBehaviour{
         hintCoroutine = null;
     }
 
-    private void RepairSword(Inventory inventory){
-        return;
+    private void RepairSword(){
+        GetComponent<BoxCollider>().enabled = false;
+        inventory.ClearAll();
+        completedSword.SetActive(true);
     }
 }

@@ -7,15 +7,15 @@ public class PipesPuzzle : MonoBehaviour{
     public GameObject swordPuzzle;
     public GameObject fire;
 
-    private Pipe startPipe;
-    private Pipe endPipe;
-    private List<Pipe> pipes;
+    public Pipe startPipe;
+    public Pipe endPipe;
+    private List<Pipe> pipes = new();
     
     private HashSet<Pipe> connectedPipes = new();
 
     public static PipesPuzzle instance;
 
-    private void Start(){
+    private void Awake(){
         if(instance == null){
             instance = this;
         }
@@ -24,10 +24,17 @@ public class PipesPuzzle : MonoBehaviour{
         }
     }
 
+    private void Start(){
+        pipes.AddRange(GetComponentsInChildren<Pipe>());
+        
+    }
+
     public void CheckPuzzle(){
         connectedPipes.Clear();
         IteratePipes(startPipe);
+        Debug.Log(connectedPipes.Contains(endPipe));
         if(connectedPipes.Contains(endPipe)){
+            print("Win found");
             HandleWin();
         }
     }
@@ -37,22 +44,26 @@ public class PipesPuzzle : MonoBehaviour{
 
         connectedPipes.Add(curr);
         foreach(Transform port in curr.portTransforms){
-            Collider[] hits = Physics.OverlapSphere(port.position, 0.05f);
+            Collider[] hits = Physics.OverlapSphere(port.position, 0.1f);
+
             foreach(var hit in hits){
-                if(hit.CompareTag("PipePort") && hit.transform.parent != curr.transform){
+                if(hit.CompareTag("Pipe Opening") && hit.transform.parent != curr.transform){
                     Pipe neighbor = hit.GetComponentInParent<Pipe>();
-                    if(neighbor != null){
+                    if(neighbor != null && neighbor != curr){
                         IteratePipes(neighbor);
                     }
                 }
             }
         }
-
     }
 
-    private void HandleWin(){
+    private void HandleWin(){ 
         fire.SetActive(false);
         hotSword.SetActive(false);
         swordPuzzle.SetActive(true);
+
+        foreach(Pipe p in pipes){
+            p.ChangeState(PipeState.LOCKED);
+        }
     }
 }

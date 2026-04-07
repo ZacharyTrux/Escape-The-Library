@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732502702786431834}
   - component: {fileID: 1142568428163389901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Opening
   m_TagString: Pipe Opening
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4686701571373654917}
   - component: {fileID: 6705217820823951079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Opening
   m_TagString: Pipe Opening
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   - Packages/com.tripolygon.umodeler-x/Editor/Resources/Materials/UModelerX_Gray_URP.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_8410342d-c40d-405c-a6b8-190da3a86a55
+    name: UM_OperatedMesh_f5e9eadf-81ad-4c0d-b4da-77ef347a4636
     skinnedMesh: 0
     sharedMesh: {fileID: -8197901355192318055}
     buidVersion:
@@ -176,7 +176,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 8410342d-c40d-405c-a6b8-190da3a86a55
+  sourceMeshRendererGUID: f5e9eadf-81ad-4c0d-b4da-77ef347a4636
   guid: be805be6-df51-481a-b93b-1535197a3332
   localOptions:
     RecalculateTangents: 0

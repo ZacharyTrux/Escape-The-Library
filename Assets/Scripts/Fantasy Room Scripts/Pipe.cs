@@ -7,6 +7,7 @@ public enum PipeState { IDLE, ROTATING, CHECKING, LOCKED }
 
 public class Pipe : MonoBehaviour{
     public PipeState State { get; private set; }
+    public bool isFixed = false;
     private Vector3 rotationAxis = Vector3.forward;
     private float rotationSpeed = 5f;
 
@@ -20,11 +21,12 @@ public class Pipe : MonoBehaviour{
     private Quaternion targetRot;
     private float t;
     private InputSystem_Actions input;
+    private int[] allowedRotations = {90, -90, 180, -180};
 
     public List<Transform> portTransforms = new();
     
 
-    void awake(){
+    void Awake(){
         foreach(Transform child in GetComponentsInChildren<Transform>()){
             if(child.CompareTag("Pipe Opening")){
                 portTransforms.Add(child);
@@ -34,6 +36,7 @@ public class Pipe : MonoBehaviour{
 
     void Start(){
         State = PipeState.IDLE;
+        RandomizePosition();
 
         allowedTransitions = new(){
             new(State.IDLE, State.ROTATING),
@@ -87,7 +90,8 @@ public class Pipe : MonoBehaviour{
     }
     private void StateEnter_Checking(){
         PipesPuzzle.instance.CheckPuzzle();
-        if(State != State.LOCKED){
+
+        if(State == State.CHECKING){
             ChangeState(State.IDLE);
         }
     }
@@ -114,5 +118,12 @@ public class Pipe : MonoBehaviour{
         if(State == State.IDLE){
             ChangeState(State.ROTATING);
         }
+    }
+
+    public void RandomizePosition(){
+        if(isFixed) return;
+
+        int randomIndex = UnityEngine.Random.Range(0, allowedRotations.Length);
+        transform.localRotation = Quaternion.Euler(0,0, allowedRotations[randomIndex]);
     }
 }

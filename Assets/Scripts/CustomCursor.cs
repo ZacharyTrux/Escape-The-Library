@@ -26,13 +26,18 @@ public class CustomCursor : MonoBehaviour {
     var ray = Camera.main.ScreenPointToRay(transform.position);
     if (Physics.Raycast(ray, out RaycastHit hit, 100)) {
 
-      if (hit.collider.CompareTag("Clickable")) {
+      if (hit.collider.CompareTag("Interactable") || hit.collider.CompareTag("Grabbable")) {
         img.sprite = sprHover;
         img.color = clrHover;
       }
 
       if(input.UI.Click.WasPressedThisFrame()){
-        hit.collider.gameObject.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
+        if(hit.collider.CompareTag("Interactable")){
+          hit.collider.gameObject.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
+        }
+        else if(hit.collider.CompareTag("Grabbable")){
+          hit.collider.gameObject.SendMessage("Grab", SendMessageOptions.DontRequireReceiver);
+        }
       }
     }
   }

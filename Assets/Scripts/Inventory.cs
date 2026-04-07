@@ -42,6 +42,7 @@ public class Inventory : MonoBehaviour {
   public bool Add(InventoryItem item) {
     for (int i = 0; i < slots.Count; i++) {
       if (slots[i].item == null) {
+        print("Item added");
         slots[i].item = item;
         slots[i].img.gameObject.SetActive(true);
         slots[i].img.sprite = item.sprHud;
@@ -49,5 +50,38 @@ public class Inventory : MonoBehaviour {
       }
     }
     return false;
+  }
+
+  public void ClearAll(){
+    for(int i = 0; i < slots.Count; i++){
+      Remove(i);
+    }
+  }
+
+  public bool HasItem(string itemName){
+    foreach(var slot in slots){
+      if(slot.item != null && slot.item.sprHud != null && slot.item.sprHud.name == itemName){
+        return true;
+      }
+    }
+    return false;
+  }
+
+  public void Remove(int i){
+    if(slots[i].item != null){
+      slots[i].item = null;
+      slots[i].img.sprite = null;
+      slots[i].img.gameObject.SetActive(false);
+    }
+  }
+
+  public int ItemCount(){
+    int count = 0;
+    foreach(var slot in slots){
+      if(slot.item != null){
+        count++;
+      }
+    }
+    return count;
   }
 }
