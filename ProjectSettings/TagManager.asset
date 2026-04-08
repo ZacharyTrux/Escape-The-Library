@@ -13,6 +13,7 @@ TagManager:
   - Pipe Opening
   - Interactable
   - Grabbable
+  - Light
   layers:
   - Default
   - TransparentFX
