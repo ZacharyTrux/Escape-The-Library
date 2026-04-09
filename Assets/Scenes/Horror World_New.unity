@@ -11863,11 +11863,7 @@ MonoBehaviour:
   leverID: 1
   rotationAngle: 90
   speed: 5
-<<<<<<< Updated upstream
-  puzzleManager: {fileID: 75105638}
-=======
   puzzleManager: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!65 &1983619456
 BoxCollider:
   m_ObjectHideFlags: 0
