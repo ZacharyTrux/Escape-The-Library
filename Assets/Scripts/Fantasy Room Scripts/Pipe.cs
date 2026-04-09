@@ -116,6 +116,9 @@ public class Pipe : MonoBehaviour{
 
     private void Interact(){
         if(State == State.IDLE){
+            if(SoundManager.Instance != null){
+                SoundManager.Play(SoundType.PIPE);
+            }
             ChangeState(State.ROTATING);
         }
     }

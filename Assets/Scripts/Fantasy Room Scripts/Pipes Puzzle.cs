@@ -1,12 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 
 public class PipesPuzzle : MonoBehaviour{
     public GameObject hotSword;
     public GameObject swordPuzzle;
     public GameObject fire;
 
+    public AudioClip extinguishSound;
     public Pipe startPipe;
     public Pipe endPipe;
     private List<Pipe> pipes = new();
@@ -58,12 +60,20 @@ public class PipesPuzzle : MonoBehaviour{
     }
 
     private void HandleWin(){ 
-        fire.SetActive(false);
+        StartCoroutine(ExtinguishFire());
         hotSword.SetActive(false);
         swordPuzzle.SetActive(true);
 
         foreach(Pipe p in pipes){
             p.ChangeState(PipeState.LOCKED);
         }
+    }
+
+    private IEnumerator ExtinguishFire(){
+        AudioSource fireAudio = fire.GetComponent<AudioSource>();
+        fireAudio.Stop();
+        fireAudio.PlayOneShot(extinguishSound);
+        yield return new WaitForSeconds(2f);
+        fire.SetActive(false);
     }
 }

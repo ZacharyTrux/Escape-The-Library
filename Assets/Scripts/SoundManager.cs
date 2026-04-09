@@ -2,9 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum SoundType {
-  FIRE,
   PICKUP,
+  PIPE,
   WALKING,
+  NPC,
+  PORTAL,
+  ANVIL,
+  DOOR,
 }
 
 public class SoundCollection {
@@ -23,21 +27,22 @@ public class SoundCollection {
   }
 
   public AudioClip GetRandClip() {
-    if (clips.Length == 0) {
+    if (clips == null || clips.Length == 0) {
       Debug.LogWarning("must have at least one clip");
       return null;
     }
-    else if (clips.Length == 1) {
+    // If there is only one clip, just return it! 
+    // This prevents the while loop from running forever.
+    if (clips.Length == 1) {
       return clips[0];
     }
-    else {
-      int index = lastClipIndex;
-      while (index == lastClipIndex) {
-        index = Random.Range(0, clips.Length);
-      }
-      lastClipIndex = index;
-      return clips[index];
+    
+    int index = lastClipIndex;
+    while (index == lastClipIndex) {
+      index = Random.Range(0, clips.Length);
     }
+    lastClipIndex = index;
+    return clips[index];
   }
 }
 
@@ -50,12 +55,22 @@ public class SoundManager : MonoBehaviour {
   public static SoundManager Instance { get; private set; }
 
   private void Awake() {
-    Instance = this;
+    if(Instance == null){
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+    else{
+        Destroy(gameObject);
+    }
     audioSrc = GetComponent<AudioSource>();
     sounds = new() {
-      {SoundType.PICKUP, new SoundCollection("safe-door") },
-      {SoundType.FIRE, new SoundCollection("fire") },
+      {SoundType.PICKUP, new SoundCollection("pickup_sound") },
       {SoundType.WALKING, new SoundCollection("walking") },
+      {SoundType.NPC, new SoundCollection("npc_sound") },
+      {SoundType.PIPE, new SoundCollection("pipe_sound") },
+      {SoundType.PORTAL, new SoundCollection("portal") },
+      {SoundType.ANVIL, new SoundCollection("anvil_hammer") },
+      {SoundType.DOOR, new SoundCollection("door_open") },
     };
   }
 
@@ -68,5 +83,9 @@ public class SoundManager : MonoBehaviour {
       audioSrc.Play();
 
     }
+  }
+
+  public static void StopAllMusic(){
+    Instance.audioSrc.Stop();
   }
 }

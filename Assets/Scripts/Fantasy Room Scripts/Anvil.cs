@@ -45,6 +45,9 @@ public class Anvil : MonoBehaviour{
     }
 
     private void RepairSword(){
+        if(SoundManager.Instance != null){
+            SoundManager.Play(SoundType.ANVIL, GetComponent<AudioSource>());
+        }
         GetComponent<BoxCollider>().enabled = false;
         inventory.ClearAll();
         completedSword.SetActive(true);

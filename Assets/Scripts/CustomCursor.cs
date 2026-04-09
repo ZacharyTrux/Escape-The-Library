@@ -37,6 +37,7 @@ public class CustomCursor : MonoBehaviour {
         }
         else if(hit.collider.CompareTag("Grabbable")){
           hit.collider.gameObject.SendMessage("Grab", SendMessageOptions.DontRequireReceiver);
+          SoundManager.Play(SoundType.PICKUP, GetComponent<AudioSource>());
         }
       }
     }

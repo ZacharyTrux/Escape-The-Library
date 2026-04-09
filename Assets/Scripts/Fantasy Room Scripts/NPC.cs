@@ -14,8 +14,9 @@ public class NPC : MonoBehaviour{
     }
 
     public void Interact(){
-        Debug.Log("Interacting with NPC");
-        
+        if(SoundManager.Instance != null){
+            SoundManager.Play(SoundType.NPC, GetComponent<AudioSource>());
+        }
 
         if(inventory.HasItem("Completed Sword_0")){
             GiveSword();
@@ -47,6 +48,10 @@ public class NPC : MonoBehaviour{
 
     private void GiveSword(){
         inventory.ClearAll();
+        if(SoundManager.Instance != null){
+            SoundManager.Play(SoundType.DOOR, GetComponent<AudioSource>());
+        }
+        print("Door should open");
         doorAnimator.SetTrigger("OpenDoor");
     }
 }

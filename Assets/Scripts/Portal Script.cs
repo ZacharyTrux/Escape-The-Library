@@ -10,7 +10,11 @@ public class PortalScript : MonoBehaviour{
             UpdateGameManager();
         }
         //InputSystem_Actions.Instance.Disable();
-        SceneManager.LoadScene(scene.name);
+        if(SoundManager.Instance != null){
+            SoundManager.StopAllMusic();
+            SoundManager.Play(SoundType.PORTAL);
+            SceneManager.LoadScene(scene.name);
+        }
     }
 
     private void UpdateGameManager(){
@@ -22,5 +26,7 @@ public class PortalScript : MonoBehaviour{
             GameManager.Instance.horrorCompleted = true;
         }
     }
+
+
 }
 

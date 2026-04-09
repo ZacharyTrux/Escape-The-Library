@@ -8,9 +8,8 @@ public class GameManager : MonoBehaviour{
     public bool fantasyCompleted = false;
     public bool horrorCompleted = false; 
     public float timeLeft;
-    private float maxTime = 1200f;
+    private float maxTime = 20f;
     private bool isTimerRunning = true;
-    public Animator doorAnimator;
 
 
 
@@ -28,9 +27,6 @@ public class GameManager : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         if(isTimerRunning){
-            if(fantasyCompleted && horrorCompleted){
-                OpenFinalDoor();
-            }
             if(timeLeft > 0){
                 timeLeft -= Time.deltaTime;
             }
@@ -42,11 +38,8 @@ public class GameManager : MonoBehaviour{
         }
     }
 
-    private void OpenFinalDoor(){
-        doorAnimator.SetBool("OpenDoor", true);
-    }
-
     private void Lose(){
+        SoundManager.StopAllMusic();
         SceneManager.LoadScene("Lose Screen");
     }
 }
