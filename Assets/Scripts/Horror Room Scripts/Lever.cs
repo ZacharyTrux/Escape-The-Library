@@ -4,7 +4,7 @@ public class Lever : MonoBehaviour
 {
     [Header("Lever Settings")]
     public int leverID;
-    public float rotationAngle = 45f;
+    public float rotationAngle = 90f;
     public float speed = 5f;
 
     [Header("References")]
@@ -15,12 +15,20 @@ public class Lever : MonoBehaviour
     private Quaternion offRotation;
     private Quaternion onRotation;
 
+    private AudioSource audioSource;
+
     void Start()
     {
+        // Store starting rotation
         offRotation = transform.localRotation;
 
         // Change axis if needed
         onRotation = offRotation * Quaternion.Euler(-rotationAngle, 0f, 0f);
+
+        audioSource = GetComponent<AudioSource>();
+
+        // Reset lever state and position
+        ResetLever();
     }
 
     void Update()
@@ -35,6 +43,12 @@ public class Lever : MonoBehaviour
 
         isActivated = true;
 
+        // Play sound when lever is pulled
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+
         // Notify puzzle manager
         if (puzzleManager != null)
         {
@@ -47,7 +61,11 @@ public class Lever : MonoBehaviour
     }
 
     public void ResetLever()
-    {
+    {   
+        // Reset lever state
         isActivated = false;
+
+        // Reset lever rotation 
+        transform.localRotation = offRotation;
     }
 }

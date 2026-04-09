@@ -3,7 +3,7 @@ using UnityEngine;
 public class HorrorRoom_PuzzleManager : MonoBehaviour
 {
     [Header("Puzzle Settings")]
-    public int[] correctOrder = { 2, 1, 3 };
+    public int[] correctOrder = { 1, 2, 3 };
 
     private int currentIndex = 0;
 
