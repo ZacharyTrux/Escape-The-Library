@@ -967,6 +967,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6578303640429027393, guid: a9bb2d7d273986b43904eafa0b3d53ed, type: 3}
   m_PrefabInstance: {fileID: 128252423}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &145655489 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+  m_PrefabInstance: {fileID: 1079691614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &146996493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3622,7 +3627,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_3f8e30db-d668-4510-b83b-f31eef691157
+    name: UM_OperatedMesh_980403ae-e515-46e7-9325-eeb7e1977a8e
     skinnedMesh: 0
     sharedMesh: {fileID: 76002933}
     buidVersion:
@@ -3635,7 +3640,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 3f8e30db-d668-4510-b83b-f31eef691157
+  sourceMeshRendererGUID: 980403ae-e515-46e7-9325-eeb7e1977a8e
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -6024,6 +6029,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1852020599399429599, guid: bf3eb9f382de32b46bf0e7d751ad177f, type: 3}
   m_PrefabInstance: {fileID: 1056756191}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1079691614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1280798309}
+    m_Modifications:
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_FocalLength
+      value: 21.982569
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: far clip plane
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_SensorSize.x
+      value: 21.946
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_SensorSize.y
+      value: 16.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 78ece31940316e4428e7bdc92b39488c, type: 2}
+    - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: orthographic size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      propertyPath: m_Name
+      value: MainCamera (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
 --- !u!1001 &1105195684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7155,7 +7245,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_d026beeb-8c33-44ed-9e76-b927409d151d
+    name: UM_OperatedMesh_1b2f7724-a639-45d0-9ce9-132dc05c20d6
     skinnedMesh: 0
     sharedMesh: {fileID: 416359199}
     buidVersion:
@@ -7168,7 +7258,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: d026beeb-8c33-44ed-9e76-b927409d151d
+  sourceMeshRendererGUID: 1b2f7724-a639-45d0-9ce9-132dc05c20d6
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -8531,6 +8621,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615209246}
   m_CullTransparentMesh: 1
+--- !u!1 &1626226529
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626226531}
+  - component: {fileID: 1626226530}
+  m_Layer: 0
+  m_Name: b58049e4-7c0d-41c5-bd44-df007856487b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1626226530
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626226529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -521311792, guid: 355474d781e5561489e3595e39866770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Tripolygon.UModelerX.Runtime.dll::Tripolygon.UModelerX.Runtime.UModelerXCurveCache
+  items: []
+--- !u!4 &1626226531
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626226529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1631690131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8753,7 +8888,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_16dd7a80-6bd8-40f5-b0df-9465b7bffec5
+    name: UM_OperatedMesh_96019ad1-38e3-439a-aaf9-26463a9c71c0
     skinnedMesh: 0
     sharedMesh: {fileID: 687994193}
     buidVersion:
@@ -8766,7 +8901,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 16dd7a80-6bd8-40f5-b0df-9465b7bffec5
+  sourceMeshRendererGUID: 96019ad1-38e3-439a-aaf9-26463a9c71c0
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -9737,7 +9872,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_27b33269-2d74-443d-acb3-c28232d3e09b
+    name: UM_OperatedMesh_cdaea851-65d1-433e-b2c9-584f9a0e9b17
     skinnedMesh: 0
     sharedMesh: {fileID: 2066834711}
     buidVersion:
@@ -9750,7 +9885,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 27b33269-2d74-443d-acb3-c28232d3e09b
+  sourceMeshRendererGUID: cdaea851-65d1-433e-b2c9-584f9a0e9b17
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -10192,7 +10327,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_43800f55-c01d-4d2f-8e27-a34342aea9d7
+    name: UM_OperatedMesh_2ead5eb1-7bbf-431c-af46-eed5b9d750f1
     skinnedMesh: 0
     sharedMesh: {fileID: 979583225}
     buidVersion:
@@ -10205,7 +10340,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 43800f55-c01d-4d2f-8e27-a34342aea9d7
+  sourceMeshRendererGUID: 2ead5eb1-7bbf-431c-af46-eed5b9d750f1
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -10625,7 +10760,7 @@ PrefabInstance:
     - target: {fileID: 5126527961139664767, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 8400000, guid: 78ece31940316e4428e7bdc92b39488c, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 5126527961139664767, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
       propertyPath: m_projectionMatrixMode
       value: 1
@@ -10690,6 +10825,9 @@ PrefabInstance:
     - {fileID: 453084650579209848, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5126527961139664760, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 145655489}
     - targetCorrespondingSourceObject: {fileID: 5126527961139664760, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1213631572}
@@ -11813,7 +11951,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_9306cbd0-c828-44d7-8ad2-c7884140348d
+    name: UM_OperatedMesh_d93e56be-84b9-45a8-8bfa-c149109c09c3
     skinnedMesh: 0
     sharedMesh: {fileID: 723158072}
     buidVersion:
@@ -11826,7 +11964,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 9306cbd0-c828-44d7-8ad2-c7884140348d
+  sourceMeshRendererGUID: d93e56be-84b9-45a8-8bfa-c149109c09c3
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -13563,3 +13701,4 @@ SceneRoots:
   - {fileID: 1983466780}
   - {fileID: 1982937508}
   - {fileID: 75105637}
+  - {fileID: 1626226531}
