@@ -1338,6 +1338,8 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     /// </summary>
     public void Dispose()
     {
+        if(m_Player.enabled) m_Player.Disable();
+        if(m_UI.enabled) m_UI.Disable();
         UnityEngine.Object.Destroy(asset);
     }
 

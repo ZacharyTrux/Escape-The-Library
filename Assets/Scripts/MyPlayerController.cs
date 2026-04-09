@@ -5,13 +5,14 @@ public class MyPlayerController : FirstPersonController
 {
     private StarterAssetsInputs _inputs;
     private AudioSource audioSrc;
+    private Coroutine footstepCoroutine;
 
     // Update is called once per frame
     public override void Start(){
         base.Start();
         audioSrc = GetComponent<AudioSource>();
         _inputs = GetComponent<StarterAssetsInputs>();
-        StartCoroutine(PlayFootsteps());
+        footstepCoroutine = StartCoroutine(PlayFootsteps());
     }
 
     private IEnumerator PlayFootsteps() {
@@ -22,19 +23,6 @@ public class MyPlayerController : FirstPersonController
                 }
             }
             yield return new WaitForSeconds(0.5f);
-        }
-    }
-
-    private void OnDisable(){
-        if (_inputs != null)
-        {
-            _inputs.gameObject.GetComponent<UnityEngine.InputSystem.PlayerInput>().enabled = false;
-        }
-    }
-    private void OnDestroy(){
-        if (_inputs != null)
-        {
-            _inputs.gameObject.GetComponent<UnityEngine.InputSystem.PlayerInput>().enabled = false;
         }
     }
 }

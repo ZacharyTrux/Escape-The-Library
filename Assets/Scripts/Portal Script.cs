@@ -14,9 +14,6 @@ public class PortalScript : MonoBehaviour{
             SoundManager.StopAllMusic();
             SoundManager.Play(SoundType.PORTAL);
         }
-        MyPlayerController player = FindFirstObjectByType<MyPlayerController>();
-        player.enabled = false;
-        Destroy(player.gameObject);
         SceneManager.LoadScene(scene.name);
     }
 

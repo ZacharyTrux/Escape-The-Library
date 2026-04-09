@@ -42,4 +42,12 @@ public class CustomCursor : MonoBehaviour {
       }
     }
   }
+
+  private void OnDisable() {
+    input.Disable();
+    input.Player.Disable();
+  }
+  private void OnDestroy() {
+    input.Dispose();
+  }
 }
