@@ -9,6 +9,7 @@ public enum SoundType {
   PORTAL,
   ANVIL,
   DOOR,
+  LEVER,
 }
 
 public class SoundCollection {
@@ -71,6 +72,7 @@ public class SoundManager : MonoBehaviour {
       {SoundType.PORTAL, new SoundCollection("portal") },
       {SoundType.ANVIL, new SoundCollection("anvil_hammer") },
       {SoundType.DOOR, new SoundCollection("door_open") },
+      {SoundType.LEVER, new SoundCollection("lever_sound") }
     };
   }
 
