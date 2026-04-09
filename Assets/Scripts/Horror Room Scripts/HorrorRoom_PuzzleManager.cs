@@ -55,9 +55,9 @@ public class HorrorRoom_PuzzleManager : MonoBehaviour
 
     void ActivatePortal()
     {
-        if (exitPortal != null)
+        if (exitPortal != null){
             exitPortal.SetActive(true);
-
+        }
         Debug.Log("Puzzle completed! Portal activated.");
     }
 
