@@ -9,6 +9,7 @@ public class PortalScript : MonoBehaviour{
         if(isCompletionPortal){
             UpdateGameManager();
         }
+        //InputSystem_Actions.Instance.Disable();
         SceneManager.LoadScene(scene.name);
     }
 
