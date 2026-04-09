@@ -11,8 +11,6 @@ public class GameManager : MonoBehaviour{
     public float maxTime = 600f;
     private bool isTimerRunning = true;
 
-
-
     void Awake(){
         if(Instance == null){
             Instance = this;
@@ -35,6 +33,11 @@ public class GameManager : MonoBehaviour{
                 isTimerRunning = false;
                 Lose();
             }
+        }
+        if(SceneManager.GetActiveScene().name == "Win Screen" || SceneManager.GetActiveScene().name == "Lose Screen"){
+            isTimerRunning = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 

@@ -14,6 +14,7 @@ public class PortalScript : MonoBehaviour{
             SoundManager.StopAllMusic();
             SoundManager.Play(SoundType.PORTAL);
         }
+
         SceneManager.LoadScene(scene.name);
     }
 

@@ -22,6 +22,9 @@ public class LoseScreenScript : MonoBehaviour{
     }
 
     public void MoveTitleScreen(){
+        if(GameManager.Instance != null){
+            Destroy(GameManager.Instance.gameObject);
+        }
         UnityEngine.SceneManagement.SceneManager.LoadScene("Title Screen");
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using TMPro;
 
 public class WinScreenScript : MonoBehaviour{
     public AudioClip winMusic;
@@ -8,9 +9,11 @@ public class WinScreenScript : MonoBehaviour{
     public Animator playerAnimator;
     public GameObject person;
     public GameObject UI;
+    public TextMeshProUGUI timeText;
 
     void Start(){
         audioSrc = GetComponent<AudioSource>();
+        timeText.text = "Time: " + TimerScript.GetFormattedTime(GameManager.Instance.timeLeft);
         StartCoroutine(AnimatePlayer());
     }
 
@@ -22,6 +25,9 @@ public class WinScreenScript : MonoBehaviour{
     }
 
     public void MoveTitleScreen(){
+        if(GameManager.Instance != null){
+            Destroy(GameManager.Instance.gameObject);
+        }
         UnityEngine.SceneManagement.SceneManager.LoadScene("Title Screen");
     }
 
