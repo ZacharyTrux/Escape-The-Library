@@ -501,6 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 75105637}
   - component: {fileID: 75105638}
+  - component: {fileID: 75105639}
   m_Layer: 0
   m_Name: Levers
   m_TagString: Untagged
@@ -544,6 +545,104 @@ MonoBehaviour:
   - {fileID: 1983619455}
   - {fileID: 1785297568}
   - {fileID: 1348470606}
+  puzzleCompleteSound: {fileID: 8300000, guid: 2e0abd8a1a73aac49a7d0c131b3fa8fb, type: 3}
+--- !u!82 &75105639
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75105636}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!43 &76002933
 Mesh:
   m_ObjectHideFlags: 0
@@ -3114,51 +3213,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2371149924075204884, guid: 74db2b03e2142b441bb2e1e42efb047e, type: 3}
   m_PrefabInstance: {fileID: 442105740}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &444416046
-GameObject:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 444416048}
-  - component: {fileID: 444416047}
-  m_Layer: 0
-  m_Name: 1d2d1952-ecf5-4568-9e89-4a0c1a95b56b
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &444416047
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444416046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -521311792, guid: 355474d781e5561489e3595e39866770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Tripolygon.UModelerX.Runtime.dll::Tripolygon.UModelerX.Runtime.UModelerXCurveCache
-  items: []
---- !u!4 &444416048
-Transform:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444416046}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &503542066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3736,7 +3790,11 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
+<<<<<<< HEAD
     name: UM_OperatedMesh_7503e0f8-4f3c-4022-9408-9055d07b4474
+=======
+    name: UM_OperatedMesh_90028b45-9bac-4924-a4fa-03ea8c3a5ea0
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
     skinnedMesh: 0
     sharedMesh: {fileID: 76002933}
     buidVersion:
@@ -3749,7 +3807,11 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
+<<<<<<< HEAD
   sourceMeshRendererGUID: 7503e0f8-4f3c-4022-9408-9055d07b4474
+=======
+  sourceMeshRendererGUID: 90028b45-9bac-4924-a4fa-03ea8c3a5ea0
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -7354,7 +7416,11 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
+<<<<<<< HEAD
     name: UM_OperatedMesh_2c1d8246-73ca-4dcb-b440-f66e210c6e33
+=======
+    name: UM_OperatedMesh_b3e0b4ff-12f0-4e3e-91d0-22be1e7d9ed5
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
     skinnedMesh: 0
     sharedMesh: {fileID: 416359199}
     buidVersion:
@@ -7367,7 +7433,11 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
+<<<<<<< HEAD
   sourceMeshRendererGUID: 2c1d8246-73ca-4dcb-b440-f66e210c6e33
+=======
+  sourceMeshRendererGUID: b3e0b4ff-12f0-4e3e-91d0-22be1e7d9ed5
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -8952,7 +9022,11 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
+<<<<<<< HEAD
     name: UM_OperatedMesh_89ee31cc-2399-49de-b610-c5d3d6b0996f
+=======
+    name: UM_OperatedMesh_cccb5976-fbf7-4fb7-a96e-1e193b142fc4
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
     skinnedMesh: 0
     sharedMesh: {fileID: 687994193}
     buidVersion:
@@ -8965,7 +9039,11 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
+<<<<<<< HEAD
   sourceMeshRendererGUID: 89ee31cc-2399-49de-b610-c5d3d6b0996f
+=======
+  sourceMeshRendererGUID: cccb5976-fbf7-4fb7-a96e-1e193b142fc4
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -9936,7 +10014,11 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
+<<<<<<< HEAD
     name: UM_OperatedMesh_dcc6e3d3-0fe3-403d-8a66-684438b26e01
+=======
+    name: UM_OperatedMesh_2eb07e5b-219f-4c9a-ba0b-5474246b0cb7
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
     skinnedMesh: 0
     sharedMesh: {fileID: 2066834711}
     buidVersion:
@@ -9949,7 +10031,11 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
+<<<<<<< HEAD
   sourceMeshRendererGUID: dcc6e3d3-0fe3-403d-8a66-684438b26e01
+=======
+  sourceMeshRendererGUID: 2eb07e5b-219f-4c9a-ba0b-5474246b0cb7
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -10391,7 +10477,11 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
+<<<<<<< HEAD
     name: UM_OperatedMesh_1946bade-2a64-4735-b62e-139fdabc20e4
+=======
+    name: UM_OperatedMesh_464eee5b-586c-4870-8e4f-a0b993fa3e72
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
     skinnedMesh: 0
     sharedMesh: {fileID: 979583225}
     buidVersion:
@@ -10404,7 +10494,11 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
+<<<<<<< HEAD
   sourceMeshRendererGUID: 1946bade-2a64-4735-b62e-139fdabc20e4
+=======
+  sourceMeshRendererGUID: 464eee5b-586c-4870-8e4f-a0b993fa3e72
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -12015,7 +12109,11 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
+<<<<<<< HEAD
     name: UM_OperatedMesh_174d68f8-7cef-49c2-8912-23ec80a885ee
+=======
+    name: UM_OperatedMesh_87e97c94-545b-4eef-bb7d-e746446c718c
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
     skinnedMesh: 0
     sharedMesh: {fileID: 723158072}
     buidVersion:
@@ -12028,7 +12126,11 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
+<<<<<<< HEAD
   sourceMeshRendererGUID: 174d68f8-7cef-49c2-8912-23ec80a885ee
+=======
+  sourceMeshRendererGUID: 87e97c94-545b-4eef-bb7d-e746446c718c
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -13765,5 +13867,8 @@ SceneRoots:
   - {fileID: 1983466780}
   - {fileID: 1982937508}
   - {fileID: 75105637}
+<<<<<<< HEAD
   - {fileID: 444416048}
   - {fileID: 208003125}
+=======
+>>>>>>> 020f21961134271277cc960dcd6f460d968fdb44
