@@ -1,94 +1,61 @@
 using UnityEngine;
 
 public class HorrorRoom_PuzzleManager : MonoBehaviour
-{   
-    public enum PuzzleState
+{
+    [Header("Puzzle Settings")]
+    public int[] correctOrder = { 2, 1, 3 };
+
+    private int currentIndex = 0;
+
+    [Header("References")]
+    public GameObject ExitPortal;
+    public Lever[] levers;
+
+    void Start()
     {
-        Idle,
-        Step1,
-        Step2,
-        Solved,
-        Failed
-    }
-
-    public PuzzleState currentState = PuzzleState.Idle;
-    public HorrorRoom_DoorController door;
-
-    public HorrorRoom_ButtonScript[] buttons;
-
-    public void PressButton(int buttonID, HorrorRoom_ButtonScript button)
-    {
-        switch (currentState)
+        // Ensure portal starts hidden
+        if (ExitPortal != null)
         {
-            case PuzzleState.Idle:
-                if (buttonID == 1)
-                {
-                    currentState = PuzzleState.Step1;
-                    button.SetCorrect();
-                }
-                else
-                    Fail(button);
-                break;
-
-            case PuzzleState.Step1:
-                if (buttonID == 2)
-                {
-                    currentState = PuzzleState.Step2;
-                    button.SetCorrect();
-                }
-                else
-                    Fail(button);
-                break;
-
-            case PuzzleState.Step2:
-                if (buttonID == 3)
-                {
-                    button.SetCorrect();
-                    Solve();
-                }
-                    
-                else
-                    Fail(button);
-                break;
+            ExitPortal.SetActive(false);
         }
     }
 
-    void Solve()
+    public void LeverPulled(int id)
     {
-        currentState = PuzzleState.Solved;
-        if (door != null) door.OpenDoor();
-        Debug.Log("Puzzle Solved!");
+        if (id == correctOrder[currentIndex])
+        {
+            currentIndex++;
+
+            if (currentIndex >= correctOrder.Length)
+            {
+                ActivatePortal();
+            }
+        }
+        else
+        {
+            ResetPuzzle();
+        }
     }
 
-    void Fail(HorrorRoom_ButtonScript wrongButton)
+    void ActivatePortal()
     {
-        currentState = PuzzleState.Failed;
+        Debug.Log("Correct sequence!");
 
-        if (wrongButton != null) wrongButton.SetWrong();
-
-        Debug.Log("Wrong order! Resetting...");
-        Invoke(nameof(ResetPuzzle), 2f);
+        if (ExitPortal != null)
+        {
+            ExitPortal.SetActive(true);
+        }
     }
 
     void ResetPuzzle()
     {
-        currentState = PuzzleState.Idle;
+        Debug.Log("Wrong order!");
 
-        foreach (var b in buttons)
+        currentIndex = 0;
+
+        foreach (Lever lever in levers)
         {
-            b.ResetColor();
+            lever.ResetLever();
         }
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

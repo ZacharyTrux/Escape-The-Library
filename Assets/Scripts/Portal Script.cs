@@ -26,5 +26,7 @@ public class PortalScript : MonoBehaviour{
             GameManager.Instance.horrorCompleted = true;
         }
     }
+
+   
 }
 
