@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour{
     public static GameManager Instance;
@@ -38,6 +39,22 @@ public class GameManager : MonoBehaviour{
             isTimerRunning = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
+        HandleDebug();
+    }
+
+    private void HandleDebug(){
+        if(Keyboard.current.digit7Key.wasPressedThisFrame){
+            fantasyCompleted = true;
+            Debug.Log("Fantasy world marked as completed.");
+        }
+        if(Keyboard.current.digit8Key.wasPressedThisFrame){
+            horrorCompleted = true;
+            Debug.Log("Horror world marked as completed.");
+        }
+        if(Keyboard.current.digit9Key.wasPressedThisFrame){
+            timeLeft = 10f;
+            Debug.Log("Timer set to 10 seconds.");
         }
     }
 
