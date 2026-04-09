@@ -3053,6 +3053,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2371149924075204884, guid: 74db2b03e2142b441bb2e1e42efb047e, type: 3}
   m_PrefabInstance: {fileID: 442105740}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &444416046
+GameObject:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444416048}
+  - component: {fileID: 444416047}
+  m_Layer: 0
+  m_Name: 1d2d1952-ecf5-4568-9e89-4a0c1a95b56b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &444416047
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444416046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -521311792, guid: 355474d781e5561489e3595e39866770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Tripolygon.UModelerX.Runtime.dll::Tripolygon.UModelerX.Runtime.UModelerXCurveCache
+  items: []
+--- !u!4 &444416048
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444416046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &503542066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3630,7 +3675,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_830d544c-d082-40f3-ba99-f8f19c1c0c9f
+    name: UM_OperatedMesh_59c5ca42-9fad-4c1c-9bb5-a4b14182a9a1
     skinnedMesh: 0
     sharedMesh: {fileID: 76002933}
     buidVersion:
@@ -3643,7 +3688,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 830d544c-d082-40f3-ba99-f8f19c1c0c9f
+  sourceMeshRendererGUID: 59c5ca42-9fad-4c1c-9bb5-a4b14182a9a1
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -7167,7 +7212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   leverID: 3
-  rotationAngle: 180
+  rotationAngle: 90
   speed: 2
   puzzleManager: {fileID: 75105638}
 --- !u!23 &1348470607
@@ -7248,7 +7293,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_b16d04e2-fafc-4e8f-890a-268f266c9ece
+    name: UM_OperatedMesh_cb111a8b-0f77-42b2-8bcd-b6383f34b84a
     skinnedMesh: 0
     sharedMesh: {fileID: 416359199}
     buidVersion:
@@ -7261,7 +7306,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: b16d04e2-fafc-4e8f-890a-268f266c9ece
+  sourceMeshRendererGUID: cb111a8b-0f77-42b2-8bcd-b6383f34b84a
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -8846,7 +8891,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_e689c679-4c22-4b8d-bd58-7296add24d91
+    name: UM_OperatedMesh_426b5375-7f73-4863-a110-af4e8c1dcbc8
     skinnedMesh: 0
     sharedMesh: {fileID: 687994193}
     buidVersion:
@@ -8859,7 +8904,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: e689c679-4c22-4b8d-bd58-7296add24d91
+  sourceMeshRendererGUID: 426b5375-7f73-4863-a110-af4e8c1dcbc8
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -9749,7 +9794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   leverID: 2
-  rotationAngle: 180
+  rotationAngle: 90
   speed: 2
   puzzleManager: {fileID: 75105638}
 --- !u!23 &1785297569
@@ -9830,7 +9875,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_aea1c388-d031-41b6-a792-b57599901b05
+    name: UM_OperatedMesh_45336c93-53fe-4949-beed-b3288c138029
     skinnedMesh: 0
     sharedMesh: {fileID: 2066834711}
     buidVersion:
@@ -9843,7 +9888,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: aea1c388-d031-41b6-a792-b57599901b05
+  sourceMeshRendererGUID: 45336c93-53fe-4949-beed-b3288c138029
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -10285,7 +10330,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_1f8c7e07-ed0d-4855-a059-e43f8f3c2dc2
+    name: UM_OperatedMesh_cbcc7d02-d9c9-4399-bca4-5ac303722735
     skinnedMesh: 0
     sharedMesh: {fileID: 979583225}
     buidVersion:
@@ -10298,7 +10343,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 1f8c7e07-ed0d-4855-a059-e43f8f3c2dc2
+  sourceMeshRendererGUID: cbcc7d02-d9c9-4399-bca4-5ac303722735
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -11909,7 +11954,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_fedbb8bd-5117-4e3f-a683-2a7d42eb93f2
+    name: UM_OperatedMesh_6cedb6f9-ee73-486b-b5ca-01eb8aa872ad
     skinnedMesh: 0
     sharedMesh: {fileID: 723158072}
     buidVersion:
@@ -11922,7 +11967,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: fedbb8bd-5117-4e3f-a683-2a7d42eb93f2
+  sourceMeshRendererGUID: 6cedb6f9-ee73-486b-b5ca-01eb8aa872ad
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -11957,7 +12002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   leverID: 1
-  rotationAngle: 180
+  rotationAngle: 90
   speed: 2
   puzzleManager: {fileID: 75105638}
 --- !u!65 &1983619456
@@ -13659,3 +13704,4 @@ SceneRoots:
   - {fileID: 1983466780}
   - {fileID: 1982937508}
   - {fileID: 75105637}
+  - {fileID: 444416048}
