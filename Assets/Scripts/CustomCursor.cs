@@ -23,7 +23,7 @@ public class CustomCursor : MonoBehaviour {
     img.sprite = sprDefault;
     img.color = clrDefault;
 
-    var ray = Camera.main.ScreenPointToRay(transform.position);
+    var ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
     if (Physics.Raycast(ray, out RaycastHit hit, 100)) {
 
       if (hit.collider.CompareTag("Interactable") || hit.collider.CompareTag("Grabbable")) {

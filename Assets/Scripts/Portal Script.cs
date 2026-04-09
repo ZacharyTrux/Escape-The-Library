@@ -9,12 +9,15 @@ public class PortalScript : MonoBehaviour{
         if(isCompletionPortal){
             UpdateGameManager();
         }
-        //InputSystem_Actions.Instance.Disable();
+
         if(SoundManager.Instance != null){
             SoundManager.StopAllMusic();
             SoundManager.Play(SoundType.PORTAL);
-            SceneManager.LoadScene(scene.name);
         }
+        MyPlayerController player = FindFirstObjectByType<MyPlayerController>();
+        player.enabled = false;
+        Destroy(player.gameObject);
+        SceneManager.LoadScene(scene.name);
     }
 
     private void UpdateGameManager(){
@@ -26,7 +29,5 @@ public class PortalScript : MonoBehaviour{
             GameManager.Instance.horrorCompleted = true;
         }
     }
-
-
 }
 

@@ -17,9 +17,24 @@ public class MyPlayerController : FirstPersonController
     private IEnumerator PlayFootsteps() {
         while (true) {
             if (_inputs != null && _inputs.move != Vector2.zero) {
-                SoundManager.Play(SoundType.WALKING, audioSrc);
+                if(SoundManager.Instance != null){
+                    SoundManager.Play(SoundType.WALKING, audioSrc);
+                }
             }
             yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    private void OnDisable(){
+        if (_inputs != null)
+        {
+            _inputs.gameObject.GetComponent<UnityEngine.InputSystem.PlayerInput>().enabled = false;
+        }
+    }
+    private void OnDestroy(){
+        if (_inputs != null)
+        {
+            _inputs.gameObject.GetComponent<UnityEngine.InputSystem.PlayerInput>().enabled = false;
         }
     }
 }

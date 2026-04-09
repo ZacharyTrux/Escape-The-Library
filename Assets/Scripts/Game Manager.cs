@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour{
     public bool fantasyCompleted = false;
     public bool horrorCompleted = false; 
     public float timeLeft;
-    private float maxTime = 20f;
+    public float maxTime = 600f;
     private bool isTimerRunning = true;
 
 
