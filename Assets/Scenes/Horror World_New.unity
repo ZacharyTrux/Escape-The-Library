@@ -3330,7 +3330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0edc5e541a429a34897729cbc0aa494b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortalScript
-  scene: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
+  scene: Library (Main Room)
   isCompletionPortal: 0
 --- !u!4 &503542070 stripped
 Transform:
@@ -3790,7 +3790,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_d0cd0f63-7f21-4aab-80cc-1545ed6153e6
+    name: UM_OperatedMesh_1ce6c8f9-55da-48c0-ae7c-7646ea1e2c97
     skinnedMesh: 0
     sharedMesh: {fileID: 76002933}
     buidVersion:
@@ -3803,7 +3803,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: d0cd0f63-7f21-4aab-80cc-1545ed6153e6
+  sourceMeshRendererGUID: 1ce6c8f9-55da-48c0-ae7c-7646ea1e2c97
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -6526,7 +6526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0edc5e541a429a34897729cbc0aa494b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PortalScript
-  scene: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
+  scene: Library (Main Room)
   isCompletionPortal: 1
 --- !u!4 &1144021495 stripped
 Transform:
@@ -7408,7 +7408,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_42cba1cc-501e-494d-9b09-93dd3b98f9fd
+    name: UM_OperatedMesh_f52f0f89-44fb-465d-a0d9-b6a844550262
     skinnedMesh: 0
     sharedMesh: {fileID: 416359199}
     buidVersion:
@@ -7421,7 +7421,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 42cba1cc-501e-494d-9b09-93dd3b98f9fd
+  sourceMeshRendererGUID: f52f0f89-44fb-465d-a0d9-b6a844550262
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -9006,7 +9006,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_8c689d76-6e35-482a-b908-8290c4c6a6d1
+    name: UM_OperatedMesh_6291838a-7338-4e22-89d7-6a96e7107850
     skinnedMesh: 0
     sharedMesh: {fileID: 687994193}
     buidVersion:
@@ -9019,7 +9019,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 8c689d76-6e35-482a-b908-8290c4c6a6d1
+  sourceMeshRendererGUID: 6291838a-7338-4e22-89d7-6a96e7107850
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -9990,7 +9990,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_0a42a3b5-c8da-49a5-90fe-6ebf10e3df6e
+    name: UM_OperatedMesh_e96e87fc-3b3d-4cef-a431-25affe2286df
     skinnedMesh: 0
     sharedMesh: {fileID: 2066834711}
     buidVersion:
@@ -10003,7 +10003,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 0a42a3b5-c8da-49a5-90fe-6ebf10e3df6e
+  sourceMeshRendererGUID: e96e87fc-3b3d-4cef-a431-25affe2286df
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -10445,7 +10445,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_6b136f08-8813-4a59-a1a2-701abdb09759
+    name: UM_OperatedMesh_513d3a1a-e96c-4e3e-a037-1a38c2e8bf3c
     skinnedMesh: 0
     sharedMesh: {fileID: 979583225}
     buidVersion:
@@ -10458,7 +10458,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 6b136f08-8813-4a59-a1a2-701abdb09759
+  sourceMeshRendererGUID: 513d3a1a-e96c-4e3e-a037-1a38c2e8bf3c
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -12069,7 +12069,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_9bd6cfca-60db-4252-b3e3-9dbb87c72432
+    name: UM_OperatedMesh_358e90d7-0049-4733-8ebf-1d26f40fef15
     skinnedMesh: 0
     sharedMesh: {fileID: 723158072}
     buidVersion:
@@ -12082,7 +12082,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 9bd6cfca-60db-4252-b3e3-9dbb87c72432
+  sourceMeshRendererGUID: 358e90d7-0049-4733-8ebf-1d26f40fef15
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0

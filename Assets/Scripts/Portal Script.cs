@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PortalScript : MonoBehaviour{
-    public Object scene;
+    public string scene;
     public bool isCompletionPortal = false;
 
     public void Interact(){
@@ -15,7 +15,7 @@ public class PortalScript : MonoBehaviour{
             SoundManager.Play(SoundType.PORTAL);
         }
 
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(scene);
     }
 
     private void UpdateGameManager(){

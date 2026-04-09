@@ -8,6 +8,8 @@ public class TitleScreenScript : MonoBehaviour{
         audioSrc = GetComponent<AudioSource>();
         audioSrc.clip = titleMusic;
         audioSrc.Play();
+        Cursor.lockState = CursorLockMode.Confined; // Locks cursor within the window
+        Cursor.visible = true;
     }
 
     public void StartGame(){

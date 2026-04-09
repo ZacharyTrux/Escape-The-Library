@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour{
         }
     }
 
+    void Start(){
+        Cursor.lockState = CursorLockMode.Locked; // Locks cursor to the center of the screen
+        Cursor.visible = false; // Hides the cursor
+    }
+
     // Update is called once per frame
     void Update(){
         if(isTimerRunning){
