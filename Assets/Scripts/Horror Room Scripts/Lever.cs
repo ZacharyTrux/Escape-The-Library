@@ -38,7 +38,9 @@ public class Lever : MonoBehaviour
     public void Interact()
     {
         if (isActivated) return;
-
+        if(SoundManager.Instance != null){
+            SoundManager.Play(SoundType.LEVER);
+        }
         isActivated = true;
 
         // Notify puzzle manager

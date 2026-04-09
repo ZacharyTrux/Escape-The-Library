@@ -10,14 +10,16 @@ public class HorrorRoom_PuzzleManager : MonoBehaviour
     [Header("References")]
     public GameObject exitPortal;
     public Lever[] levers;
+    public AudioClip puzzleCompleteSound;
 
     private int currentIndex = 0;
     private PuzzleState state = PuzzleState.Waiting;
+    private AudioSource audioSource;
 
-    void Start()
-    {
+    void Start(){
         state = PuzzleState.Waiting;
         currentIndex = 0;
+        audioSource = GetComponent<AudioSource>();
 
         // Reset all levers
         foreach (var lever in levers)
@@ -53,10 +55,12 @@ public class HorrorRoom_PuzzleManager : MonoBehaviour
         }
     }
 
-    void ActivatePortal()
-    {
+    void ActivatePortal(){
         if (exitPortal != null){
             exitPortal.SetActive(true);
+        }
+        if (puzzleCompleteSound != null){
+            audioSource.PlayOneShot(puzzleCompleteSound);
         }
         Debug.Log("Puzzle completed! Portal activated.");
     }
