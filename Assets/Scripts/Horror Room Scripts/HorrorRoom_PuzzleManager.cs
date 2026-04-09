@@ -1,59 +1,75 @@
 using UnityEngine;
 
+public enum PuzzleState { Waiting, InProgress, Completed }
+
 public class HorrorRoom_PuzzleManager : MonoBehaviour
 {
     [Header("Puzzle Settings")]
     public int[] correctOrder = { 1, 2, 3 };
 
-    private int currentIndex = 0;
-
     [Header("References")]
-    public GameObject ExitPortal;
+    public GameObject exitPortal;
     public Lever[] levers;
+
+    private int currentIndex = 0;
+    private PuzzleState state = PuzzleState.Waiting;
 
     void Start()
     {
-        // Ensure portal starts hidden
-        if (ExitPortal != null)
-        {
-            ExitPortal.SetActive(false);
-        }
+        state = PuzzleState.Waiting;
+        currentIndex = 0;
+
+        // Reset all levers
+        foreach (var lever in levers)
+            lever.ResetLever();
+
+        // Make portal invisible
+        if (exitPortal != null)
+            exitPortal.SetActive(false);
     }
 
-    public void LeverPulled(int id)
+    public void LeverPulled(int leverID)
     {
-        if (id == correctOrder[currentIndex])
+        if (state == PuzzleState.Completed)
+            return;
+
+        // Check if lever matches expected in sequence
+        if (leverID == correctOrder[currentIndex])
         {
             currentIndex++;
+            state = PuzzleState.InProgress;
 
+            // Sequence complete
             if (currentIndex >= correctOrder.Length)
             {
+                state = PuzzleState.Completed;
                 ActivatePortal();
             }
         }
         else
         {
+            // Wrong lever: reset everything
             ResetPuzzle();
         }
     }
 
     void ActivatePortal()
     {
-        Debug.Log("Correct sequence!");
+        if (exitPortal != null)
+            exitPortal.SetActive(true);
 
-        if (ExitPortal != null)
-        {
-            ExitPortal.SetActive(true);
-        }
+        Debug.Log("Puzzle completed! Portal activated.");
     }
 
     void ResetPuzzle()
     {
-        Debug.Log("Wrong order!");
+        Debug.Log("Wrong order! Resetting puzzle...");
 
         currentIndex = 0;
+        state = PuzzleState.Waiting;
 
-        foreach (Lever lever in levers)
+        // Reset lever positions
+        foreach (var lever in levers)
         {
             lever.ResetLever();
         }

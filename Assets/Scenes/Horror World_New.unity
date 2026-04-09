@@ -538,9 +538,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d667fb446bcd2469b6b17da8b1393d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HorrorRoom_PuzzleManager
-  correctOrder: 020000000100000003000000
-  ExitPortal: {fileID: 1144021492}
-  levers: []
+  correctOrder: 010000000200000003000000
+  exitPortal: {fileID: 1144021492}
+  levers:
+  - {fileID: 1983619455}
+  - {fileID: 1785297568}
+  - {fileID: 1348470606}
 --- !u!43 &76002933
 Mesh:
   m_ObjectHideFlags: 0
@@ -3627,7 +3630,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_980403ae-e515-46e7-9325-eeb7e1977a8e
+    name: UM_OperatedMesh_aa2fce23-996f-468b-9c2e-e6f5cf9be2b4
     skinnedMesh: 0
     sharedMesh: {fileID: 76002933}
     buidVersion:
@@ -3640,7 +3643,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 980403ae-e515-46e7-9325-eeb7e1977a8e
+  sourceMeshRendererGUID: aa2fce23-996f-468b-9c2e-e6f5cf9be2b4
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -7130,7 +7133,7 @@ GameObject:
   - component: {fileID: 1348470606}
   - component: {fileID: 1348470610}
   m_Layer: 0
-  m_Name: Switch
+  m_Name: Switch3
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7164,9 +7167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   leverID: 3
-  rotationAngle: 90
-  speed: 5
-  puzzleManager: {fileID: 75105638}
+  rotationAngle: 180
+  speed: 2
+  puzzleManager: {fileID: 0}
 --- !u!23 &1348470607
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7245,7 +7248,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_1b2f7724-a639-45d0-9ce9-132dc05c20d6
+    name: UM_OperatedMesh_dbed8b29-28a4-4f7e-9725-eb233cdcf5fd
     skinnedMesh: 0
     sharedMesh: {fileID: 416359199}
     buidVersion:
@@ -7258,7 +7261,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 1b2f7724-a639-45d0-9ce9-132dc05c20d6
+  sourceMeshRendererGUID: dbed8b29-28a4-4f7e-9725-eb233cdcf5fd
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -8888,7 +8891,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_96019ad1-38e3-439a-aaf9-26463a9c71c0
+    name: UM_OperatedMesh_159fa398-e8fb-49c2-a7b1-ac43b6cfb515
     skinnedMesh: 0
     sharedMesh: {fileID: 687994193}
     buidVersion:
@@ -8901,7 +8904,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 96019ad1-38e3-439a-aaf9-26463a9c71c0
+  sourceMeshRendererGUID: 159fa398-e8fb-49c2-a7b1-ac43b6cfb515
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -9757,7 +9760,7 @@ GameObject:
   - component: {fileID: 1785297568}
   - component: {fileID: 1785297572}
   m_Layer: 0
-  m_Name: Switch
+  m_Name: Switch2
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9791,9 +9794,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   leverID: 2
-  rotationAngle: 90
-  speed: 5
-  puzzleManager: {fileID: 75105638}
+  rotationAngle: 180
+  speed: 2
+  puzzleManager: {fileID: 0}
 --- !u!23 &1785297569
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9872,7 +9875,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_cdaea851-65d1-433e-b2c9-584f9a0e9b17
+    name: UM_OperatedMesh_c2e33ce4-baf0-4ef0-b376-533a504648b1
     skinnedMesh: 0
     sharedMesh: {fileID: 2066834711}
     buidVersion:
@@ -9885,7 +9888,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: cdaea851-65d1-433e-b2c9-584f9a0e9b17
+  sourceMeshRendererGUID: c2e33ce4-baf0-4ef0-b376-533a504648b1
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -10327,7 +10330,7 @@ MonoBehaviour:
   - Assets/Materials/Textures/WOOD/WOOD_Plain/Materials/Wood_Plain_B.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_2ead5eb1-7bbf-431c-af46-eed5b9d750f1
+    name: UM_OperatedMesh_e1af4fe7-2511-493b-ab48-91db5a9a808f
     skinnedMesh: 0
     sharedMesh: {fileID: 979583225}
     buidVersion:
@@ -10340,7 +10343,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 2ead5eb1-7bbf-431c-af46-eed5b9d750f1
+  sourceMeshRendererGUID: e1af4fe7-2511-493b-ab48-91db5a9a808f
   guid: beb4c9d0-edd2-4776-8cb1-19bac1ced128
   localOptions:
     RecalculateTangents: 0
@@ -11852,7 +11855,7 @@ GameObject:
   - component: {fileID: 1983619455}
   - component: {fileID: 1983619456}
   m_Layer: 0
-  m_Name: Switch
+  m_Name: Switch1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11951,7 +11954,7 @@ MonoBehaviour:
   - Assets/Materials/Materials/brushed-brass-7874-in-architextures.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_d93e56be-84b9-45a8-8bfa-c149109c09c3
+    name: UM_OperatedMesh_1afcf2d3-338c-40c2-ad51-dd22ce21313b
     skinnedMesh: 0
     sharedMesh: {fileID: 723158072}
     buidVersion:
@@ -11964,7 +11967,7 @@ MonoBehaviour:
       OptimizedTopology: 0
       TransformVersion: 0
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: d93e56be-84b9-45a8-8bfa-c149109c09c3
+  sourceMeshRendererGUID: 1afcf2d3-338c-40c2-ad51-dd22ce21313b
   guid: c73218da-88ea-4e1b-bfe4-4a73d8a7fd13
   localOptions:
     RecalculateTangents: 0
@@ -11999,8 +12002,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   leverID: 1
-  rotationAngle: 90
-  speed: 5
+  rotationAngle: 180
+  speed: 2
   puzzleManager: {fileID: 0}
 --- !u!65 &1983619456
 BoxCollider:

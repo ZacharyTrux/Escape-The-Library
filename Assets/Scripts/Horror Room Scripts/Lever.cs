@@ -23,9 +23,7 @@ public class Lever : MonoBehaviour
         offRotation = transform.localRotation;
 
         // Change axis if needed
-        onRotation = offRotation * Quaternion.Euler(-rotationAngle, 0f, 0f);
-
-        audioSource = GetComponent<AudioSource>();
+        onRotation = offRotation * Quaternion.Euler(rotationAngle, 0f, 0f);
 
         // Reset lever state and position
         ResetLever();
@@ -42,12 +40,6 @@ public class Lever : MonoBehaviour
         if (isActivated) return;
 
         isActivated = true;
-
-        // Play sound when lever is pulled
-        if (audioSource != null)
-        {
-            audioSource.Play();
-        }
 
         // Notify puzzle manager
         if (puzzleManager != null)
