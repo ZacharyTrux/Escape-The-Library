@@ -1,12 +1,13 @@
 using UnityEngine;
 
 public class TitleScreenScript : MonoBehaviour{
-    //public AudioClip titleMusic;
-    private static AudioClip audioSrc;
+    public AudioClip titleMusic;
+    private AudioSource audioSrc;
 
     void Start(){
-        audioSrc = GetComponent<AudioClip>();
-        //audioSrc.Play(titleMusic);
+        audioSrc = GetComponent<AudioSource>();
+        audioSrc.clip = titleMusic;
+        audioSrc.Play();
     }
 
     public void StartGame(){
